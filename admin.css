@@ -1,0 +1,133 @@
+:root {
+    --bg-color: #f2f5f9;
+    --text-color: #222;
+    --table-bg: #fff;
+    --th-bg: #2c3e50;
+    --th-text: #fff;
+    --td-border: #ddd;
+    --hover-row: #f1f1f1;
+    --delete-bg: #e74c3c;
+    --button-bg: #3498db;
+    --button-text: white;
+}
+
+.dark-mode {
+    --bg-color: #121212;
+    --text-color: #eee;
+    --table-bg: #1f1f1f;
+    --th-bg: #444;
+    --th-text: #eee;
+    --td-border: #555;
+    --hover-row: #2a2a2a;
+    --delete-bg: #c0392b;
+    --button-bg: #2980b9;
+    --button-text: white;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+a.button,
+button.theme-toggle {
+    position: fixed;
+    top: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+a.button {
+    right: 20px;
+    background-color: var(--button-bg);
+}
+
+button.theme-toggle {
+    right: 120px;
+    background-color: var(--button-bg);
+}
+
+a.button:hover,
+button.theme-toggle:hover {
+    opacity: 0.85;
+}
+
+.search-form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-form button {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: var(--table-bg);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--th-bg);
+    color: var(--th-text);
+    padding: 14px;
+    border: 1px solid var(--td-border);
+}
+
+td {
+    padding: 12px;
+    border: 1px solid var(--td-border);
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: var(--hover-row);
+}
+
+tr:hover {
+    background-color: var(--hover-row);
+}
+
+td a {
+    color: white;
+    background-color: var(--delete-bg);
+    padding: 6px 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+td a:hover {
+    opacity: 0.8;
+}
